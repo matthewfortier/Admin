@@ -1,0 +1,79 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900);
+body{
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* Sidebar Wrapper */
+#sidebar-wrapper{
+  z-index: 1;
+  position: absolute;
+  width: 200px;
+  height: 100%;
+  background: rgb(46, 62, 78);
+}
+
+#sidebar-wrapper img{
+  margin: 10px 0 10px 0;
+}
+
+#sidebar-wrapper span{
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  padding-left: 5px;
+}
+
+#sidebar-wrapper p{
+  position: relative;
+  margin-bottom: -1px;
+  font-weight: 900;
+  font-size: .8em;
+  text-indent: 12px;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(146, 155, 163);
+}
+
+/* Page Content */
+#page-content-wrapper{
+  width: 100%;
+  position: absolute;
+  padding-top: 1%;
+  padding-left: 11%;
+}
+
+.sidebar-nav{
+  padding: 0;
+  margin-top: .9em;
+  margin-bottom: .5em;
+  list-style: none;
+}
+
+.sidebar-nav li{
+  font-family: 'Roboto', sans-serif;
+  font-size: .9em;
+  text-indent: 12px;
+  line-height: 40px;
+  font-weight: 900;
+}
+
+.sidebar-nav i{
+  padding-right: 20px;
+}
+
+.sidebar-nav li a{
+  color: rgb(146, 155, 163);
+  display: block;
+  text-decoration: none;
+}
+
+.sidebar-nav li a:hover{
+  background: rgb(43, 58, 73);
+  color: white;
+}
+.sidebar-nav li a:active{
+  background: rgb(43, 58, 73);
+  color: white;
+}
+
+.current{
+  background: rgb(43, 58, 73);
+  color: white;
+}

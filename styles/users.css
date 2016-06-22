@@ -1,0 +1,13 @@
+#page-content-wrapper span{
+  font-size: .6em;
+  padding-left: 1%;
+}
+
+#page-content-wrapper i{
+  padding-right: .5%;
+}
+
+.small{
+  height: 250px;
+  width: 100%;
+}
