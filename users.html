@@ -34,7 +34,9 @@
         <div id="page-content-wrapper">
           <div class="container-fluid">
             <div class="row">
-              <h3>LCDI Workforce Members <span><i class="fa fa-plus" aria-hidden="true"></i>New</span></h3>
+              <div class="col-md-12">
+                <h3>LCDI Workforce Members <a href="#"><span><i class="fa fa-plus" aria-hidden="true"></i>New</span></a></h3>
+              </div>
               <div class="col-md-2">
                 <div class="card">
                   <img class="card-img-top small" src="img\users_full\acaron.jpg" alt="Card image cap">
@@ -530,26 +532,6 @@
             $(this).css("color", "white");
           }
         });
-      });
-      $(function() {
-
-          var $sidebar   = $("#sidebar-wrapper"),
-              $window    = $(window),
-              offset     = $sidebar.offset(),
-              topPadding = 0;
-
-          $window.scroll(function() {
-              if ($window.scrollTop() > offset.top) {
-                  $sidebar.stop().animate({
-                      marginTop: $window.scrollTop() - offset.top + topPadding
-                  });
-              } else {
-                  $sidebar.stop().animate({
-                      marginTop: 0
-                  });
-              }
-          });
-
       });
     </script>
   </body>

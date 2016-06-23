@@ -5,7 +5,7 @@ body{
 /* Sidebar Wrapper */
 #sidebar-wrapper{
   z-index: 1;
-  position: absolute;
+  position: fixed;
   width: 200px;
   height: 100%;
   background: rgb(46, 62, 78);
@@ -22,7 +22,6 @@ body{
 }
 
 #sidebar-wrapper p{
-  position: relative;
   margin-bottom: -1px;
   font-weight: 900;
   font-size: .8em;
@@ -41,7 +40,7 @@ body{
 
 .sidebar-nav{
   padding: 0;
-  margin-top: .9em;
+  margin-top: .3em;
   margin-bottom: .5em;
   list-style: none;
 }
