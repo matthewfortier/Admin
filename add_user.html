@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>LCDI Admin - Add User</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="styles/users.css">
+  </head>
+  <style media="screen">
+    h6:before {
+      content: '(';
+    }
+
+    h6:after {
+      content: ')';
+    }
+    #p-email:before{
+      content: "Email: ";
+      font-weight: bold;
+    }
+    #p-phone1:before{
+      content: "Phone (1): ";
+      font-weight: bold;
+    }
+    #p-phone2:before{
+      content: "Phone (2): ";
+      font-weight: bold;
+    }
+    .card-block p{
+      margin-bottom: .5em;
+    }
+  </style>
+  <body>
+
+    <div class="wrapper">
+        <!-- Side Nav -->
+        <div id="sidebar-wrapper">
+          <center><img src="img/lcdi_icon.ico" alt="LCDI Logo" style="width: auto; height: 50px;"/><span>Admin Panel</span></center>
+          <p>Main</p>
+          <ul class="sidebar-nav">
+            <li><a href="index.html"><i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</a></li>
+            <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i>Settings</a></li>
+            <li><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></li>
+          </ul>
+          <p>Seating Chart Options</p>
+          <ul class="sidebar-nav">
+            <li><a href="users.html"><i class="fa fa-users" aria-hidden="true"></i>Users</a></li>
+            <li><a href="#"><i class="fa fa-folder-open" aria-hidden="true"></i>Projects</a></li>
+            <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i>Reservations</a></li>
+            <li><a href="#"><i class="fa fa-hourglass" aria-hidden="true"></i>Report</a></li>
+          </ul>
+        </div>
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+          <nav class="navbar navbar-light bg-faded">
+            <h1 class="navbar-brand" style="width: auto;">Add Workforce Member</h1>
+          </nav>
+          <div class="container-fluid">
+            <div class="col-md-5">
+              <div class="user-container">
+                <form class="" action="index.html" method="post">
+                  <fieldset class="form-group">
+                    <label for="name">Name<span class="required">*</span></label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter Name" required>
+                    <small class="text-muted">Full Name</small>
+                  </fieldset>
+                  <fieldset class="form-group">
+                    <label for="email">Email address<span class="required">*</span></label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                    <small class="text-muted">Check to make sure this is correct</small>
+                  </fieldset>
+                  <fieldset class="form-group">
+                    <label for="username">Username<span class="required">*</span></label>
+                    <input type="text" class="form-control" id="username" placeholder="Enter username" required>
+                  </fieldset>
+                  <fieldset class="form-group">
+                    <label for="password">Password<span class="required">*</span></label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+                  </fieldset>
+                  <fieldset class="form-group">
+                    <label for="phone1">Phone (1)</label>
+                    <input type="phone" class="form-control" id="phone1" placeholder="Enter phone">
+                  </fieldset>
+                  <fieldset class="form-group">
+                    <label for="phone2">Phone (2)</label>
+                    <input type="phone" class="form-control" id="phone2" placeholder="Enter phone">
+                  </fieldset>
+                  <fieldset class="form-group">
+                    <label for="major">Major<span class="required">*</span></label>
+                    <select class="form-control" id="major" required>
+                      <option>Computer & Digital Forensics</option>
+                      <option>Computer Networking & Cybersecurity</option>
+                      <option>Computer Science & Innovation</option>
+                      <option>Communications</option>
+                      <option>Graphic Design</option>
+                    </select>
+                  </fieldset>
+                  <fieldset class="form-group">
+                    <label for="file">Photo</label><br>
+                    <input type="file" name="file" id="file" value="">
+                  </fieldset>
+                  <fieldset class="form-group">
+                    <label for="wiw">When I Work</label>
+                    <select class="form-control" id="wiw">
+                      <option>WhenIWork</option>
+                    </select>
+                  </fieldset>
+                  <fieldset class="form-group">
+                    <label for="admin">Admin?</label>
+                    <input type="checkbox" name="admin" value="">
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="user-container" style="box-shadow: none; margin-top: 1.05em;">
+                <div class="card">
+                  <img class="card-img-top" src="img/guest.jpg" alt="Card image cap" style="width: 100%; height: 100%;">
+                  <div class="card-block">
+                    <div id="user-name" style="display: flex;">
+                      <h4 id="card-title" style="inline-block"></h4>
+                      <h6 id="p-username" style="padding-left: 1%; padding-top: 1%"></h6>
+                      <i class="fa fa-lock" id="lock" aria-hidden="true" style="padding-left: 1%; padding-top: 1%"></i>
+                      <i class="fa fa-unlock" id="unlock" aria-hidden="true" style="padding-left: 1%; padding-top: 1%"></i>
+                    </div>
+                    <h5 id="p-major"></h5>
+                    <p id="p-email"></p>
+                    <p id="p-phone1"></p>
+                    <p id="p-phone2"></p>
+                    <p class="card-text">
+                    </p>
+                    <a href="#" class="btn btn-primary">Add User</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      if($("#name").val() == ""){
+        $(".card").hide();
+        $("#p-username").hide();
+        $("#p-email").hide();
+        $("#p-phone1").hide();
+        $("#p-phone2").hide();
+        $("#p-major").hide();
+        $("#unlock").hide();
+      } else {
+        $(".card").show();
+      }
+      $("#name").keyup(function(){
+        $(".card").show();
+        $("#card-title").text($("#name").val());
+        suggestUsername();
+        suggestEmail();
+      });
+      $("#email").keyup(function(){
+        $(".card").show();
+        $("#p-email").show();
+        $("#p-email").text($("#email").val());
+      });
+      $("#username").keyup(function(){
+        $(".card").show();
+        $("#p-username").show();
+        $("#p-username").text($("#username").val());
+      });
+      $("#phone1").keyup(function(){
+        $(".card").show();
+        $("#p-phone1").show();
+        $("#p-phone1").text($("#phone1").val());
+      });
+      $("#phone2").keyup(function(){
+        $(".card").show();
+        $("#p-phone2").show();
+        $("#p-phone2").text($("#phone2").val());
+      });
+      $("#major").change(function(){
+        if($("#phone2").text() == ''){
+          $("#p-phone2").hide();
+        }
+        $(".card").show();
+        $("#p-major").show();
+        $("#p-major").text($("#major").val());
+      });
+      $('input[type="checkbox"]').click(function(){
+        if($(this).prop("checked") == true){
+            $("#unlock").show();
+            $("#lock").hide();
+        }
+        else if($(this).prop("checked") == false){
+          $("#unlock").hide();
+          $("#lock").show();
+        }
+      });
+      $("input:file").change(function () {
+        $(".card").show();
+             if ($(this).val() !== "") {
+              var file = $('#file')[0].files[0];
+              console.log(file.size);
+              //console.log(file.width);
+              var reader = new FileReader();
+              var img = new Image();
+              var _URL = window.URL || window.webkitURL;
+              reader.readAsDataURL(file);
+              reader.onload = function(_file) {
+
+              $('.card .card-img-top').attr('src',_file.target.result);
+              //console.log(img.src);
+              console.log(img.width);
+          }
+         }
+      });
+      $(function(){
+        $('a').each(function() {
+          if ($(this).prop('href') == window.location.href) {
+            $(this).addClass('current');
+            $(this).css("color", "white");
+          }
+        });
+      });
+      var suggestUsername = function (){
+        var name_lowercase = $("#name").val().toLowerCase();
+        if( name_lowercase != '' ){
+          var name_first_initial = name_lowercase[0];
+          var name_last = name_lowercase.substring( 1 ).substring( name_lowercase.lastIndexOf( " " ) );
+          $("#p-username").show()
+          $("#username").val(name_first_initial + name_last);
+          $("#p-username").text($("#username").val());
+        }
+      }
+      var suggestEmail = function (){
+        var email_lowercase = $("#name").val().toLowerCase();
+        if( email_lowercase != '' ){
+          var name = email_lowercase.split(" ", 2);
+          if (name[1] == null){
+            name[1] = '';
+          }
+          $("#p-email").show()
+          $("#email").val(name[0] + '.' + name[1] + "@mymail.champlain.edu");
+          $("#p-email").text($("#email").val());
+        }
+      }
+    </script>
+  </body>
+</html>
