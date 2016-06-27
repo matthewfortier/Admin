@@ -3,6 +3,10 @@
   padding-left: 1%;
 }
 
+.user-nav a{
+  color: rgb(146, 155, 163);
+}
+
 #page-content-wrapper i{
   padding-right: .5%;
 }

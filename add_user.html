@@ -57,7 +57,7 @@
         <!-- Page Content -->
         <div id="page-content-wrapper">
           <nav class="navbar navbar-light bg-faded">
-            <h1 class="navbar-brand" style="width: auto;">Add Workforce Member</h1>
+            <h1 class="navbar-brand" style="width: 1000px;">Add Workforce Member</h1>
           </nav>
           <div class="container-fluid">
             <div class="col-md-5">
@@ -157,7 +157,13 @@
         $(".card").show();
       }
       $("#name").keyup(function(){
-        $(".card").show();
+        if($("#name").val() == ''){
+          $(".card").hide();
+          $("#email").val('');
+          $("#username").val('');
+        } else {
+          $(".card").show();
+        }
         $("#card-title").text($("#name").val());
         suggestUsername();
         suggestEmail();

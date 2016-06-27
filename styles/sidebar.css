@@ -37,9 +37,15 @@ form{
 
 /* Page Content */
 #page-content-wrapper{
+  z-index: -1;
   width: 100%;
   position: absolute;
   padding-left: 10%;
+}
+
+.container-fluid{
+  margin-top: 4%;
+  margin-left: 1%;
 }
 
 .user-container{
@@ -51,6 +57,9 @@ form{
 }
 
 .navbar{
+  position: fixed;
+  z-index: 1;
+  width: 100%;
   background-color: white;
   -webkit-box-shadow: 0 6px 6px -6px #777;
        -moz-box-shadow: 0 6px 6px -6px #777;
